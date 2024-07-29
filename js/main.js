@@ -35,20 +35,14 @@
 //     address: "tashkent",
 // }
 // function sayMyname(a, b){
-//     let res = []
-//     for(let obj01 of a){
-//         for(let obj02 of b){
-//             if(obj01.age > obj02.age){
-//                 res.push(obj01.name)
-//             }
-//             else{
-//                 res.push(obj02.name)
-//             }
-//         }
+//     if(a.age > b.age){
+//         return a.name
 //     }
-//     return res
+//     else{
+//         return b.name
+//     }
 // }
-// const result = sayMyname([obj1], [obj2])
+// const result = sayMyname(obj1, obj2)
 // console.log(result);
 
 // 4-task
@@ -100,11 +94,17 @@
 // console.log(result);
 
 // 8-task
-// let arr = [2,4,6,7, true,null,0]
+// let arr = [2,4,6,7, true,null,undefined]
 // function findNumber(find){
 //     let evenRes = 0
-//     for(let num of find){
-//         evenRes += num
+//     for(let i = 0; i < find.length; i++){
+//         if(typeof find[i] == "undefined"){
+//             find[i] = 0
+//             evenRes += find[i]
+//         }
+//         else{
+//             evenRes += find[i]
+//         }
 //     }
 //     return evenRes
 // }
@@ -145,13 +145,17 @@
 // console.log(result);
 
 // 2-task
-// function findNumber(i){
-//     for(let i = 1; i <= 10; i++){
-//         let newNum = prompt("enter number !!!") - 0;
-        
+// function findNumber(a){
+//     if( a>10){
+//         console.log("Iltimos 10 gaca son kiriting");
 //     }
+//     let evenRes = 0
+//     for(i = 1; i <= a; i++){
+//         evenRes += i
+//     }
+//     return evenRes
 // }
-
+// console.log(findNumber(10));
 // 3-task
 // let arr = [1,4,8,7,6]
 // let arr2 = [4,6,8,7,3]
